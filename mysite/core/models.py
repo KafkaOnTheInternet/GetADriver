@@ -29,6 +29,8 @@ class Ride(models.Model):
     passenger_name = models.ForeignKey(Passenger, on_delete=models.CASCADE)
     driver_name = models.ForeignKey(Driver, on_delete=models.CASCADE)
 
+    def str(self):
+        return self.car + ' ' + self.passenger_name + ' ' + self.driver_name
 
 
 class RideDetails(models.Model):
